@@ -44,14 +44,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                안녕하세요, 저는 [이름]입니다
+                인공지능 개발자 조항민입니다.
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                프론트엔드 개발자 / 풀스택 개발자
+                AI Researcher
               </p>
               <p className="text-gray-700 dark:text-gray-400 mb-8">
-                새로운 기술을 배우고 도전하는 것을 좋아하는 개발자입니다.
-                사용자 경험을 중요시하며, 깔끔하고 효율적인 코드를 작성하기 위해 노력합니다.
+                우리가 평소에 사용하고 있는 사소한 서비스와 제품들에도 인공지능이 담겨있다는 사실을 아시나요?<br/>
+                이처럼 사람들의 삶 속에 스며들 수 있는 인공지능을 개발하고 배포하는 것을 목표로 하는 개발자입니다.<br/>
+                때론 단순 재미를 위한 서비스들을 만들지만, 이것이 인공지능과 사람이 더욱 가까워질 수 있는 길이라고 믿습니다.
               </p>
               <div className="flex space-x-4">
                 <a href="#about" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
@@ -83,13 +84,26 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">경력</h3>
               <div className="space-y-6">
                 <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-300">
-                  <h4 className="text-xl font-medium text-gray-900 dark:text-white">회사명</h4>
-                  <p className="text-gray-600 dark:text-gray-300">직책</p>
-                  <p className="text-gray-500 dark:text-gray-400">기간</p>
+                  <h4 className="text-xl font-medium text-gray-900 dark:text-white">가천대학교 교내 자율동아리 AIIA</h4>
+                  <p className="text-gray-600 dark:text-gray-300">AI R&D Unit Leader</p>
+                  <p className="text-gray-500 dark:text-gray-400">2024.03 - 진행중</p>
                   <ul className="mt-4 list-disc list-inside text-gray-700 dark:text-gray-300">
-                    <li>주요 업무 1</li>
-                    <li>주요 업무 2</li>
-                    <li>주요 업무 3</li>
+                    <li>PyTorch를 사용한 Deep Learning 모델 다수 구현</li>
+                    <li>Car Classification Model 개발 (10-classes)</li>
+                    <li>AIIA-GPT ChatBot 개발</li>
+                    <li>Chill-Guy Meme Generator 백엔드 개발</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pt-10"></div>
+              <div className="space-y-6">
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-300">
+                  <h4 className="text-xl font-medium text-gray-900 dark:text-white">휴몬랩 코딩 아카데미</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Educator</p>
+                  <p className="text-gray-500 dark:text-gray-400">2024.07 - 2024.09</p>
+                  <ul className="mt-4 list-disc list-inside text-gray-700 dark:text-gray-300">
+                    <li>Orange 3를 활용해 데이터분석 시작하기</li>
+                    <li>앱인벤터로 나만의 앱 제작하기</li>
                   </ul>
                 </div>
               </div>
@@ -99,12 +113,11 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">학력</h3>
               <div className="space-y-6">
                 <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-300">
-                  <h4 className="text-xl font-medium text-gray-900 dark:text-white">학교명</h4>
-                  <p className="text-gray-600 dark:text-gray-300">전공</p>
-                  <p className="text-gray-500 dark:text-gray-400">기간</p>
+                  <h4 className="text-xl font-medium text-gray-900 dark:text-white">가천대학교</h4>
+                  <p className="text-gray-600 dark:text-gray-300">AI·소프트웨어학부/인공지능전공</p>
+                  <p className="text-gray-500 dark:text-gray-400">2024.03 - 진행중</p>
                   <ul className="mt-4 list-disc list-inside text-gray-700 dark:text-gray-300">
-                    <li>주요 활동 1</li>
-                    <li>주요 활동 2</li>
+                    <li>교내 자율동아리 AIIA 소속</li>
                   </ul>
                 </div>
               </div>
@@ -112,13 +125,14 @@ export default function Home() {
           </div>
 
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">자기소개</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Experience</h3>
             <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md transition-colors duration-300">
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                여기에 자신에 대한 상세한 소개를 작성해주세요. 
-                개발자로서의 철학, 관심사, 목표 등을 포함하여 
-                자신을 잘 표현할 수 있는 내용을 작성하면 좋습니다.
-              </p>
+              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+                <li>(2025.02.27) AIIA PRIME Coffee Chat 주최 & 인솔자 참여</li>
+                <li>(2024.06.19-21) <a href="https://smarttechkorea.com/aibigdatashow" target="_blank" rel="noopener noreferrer">AI BigData Show</a> 참여</li>
+                <li>축구선수 유망주 예측 대회 참여 (DACON)</li>
+                <li>신약 개발 경진대회 참여 (DACON)</li>
+              </ul>
             </div>
           </div>
         </div>
