@@ -4,26 +4,21 @@ import Link from 'next/link';
 const projects = [
   {
     id: '1',
-    title: "프로젝트 1",
-    description: "프로젝트에 대한 간단한 설명",
+    title: "Image & Story Generator",
+    description: "API를 사용한 Image To Text, Story Generator",
     detailedDescription: `
-      이 프로젝트는 사용자 경험을 개선하기 위해 개발되었습니다. 
-      주요 기능으로는 사용자 인증, 데이터 시각화, 실시간 알림 등이 있습니다.
-      
-      개발 과정에서 여러 도전 과제를 해결했습니다:
-      1. 대용량 데이터 처리를 위한 최적화
-      2. 반응형 디자인 구현
-      3. 보안 취약점 해결
-      
-      이 프로젝트를 통해 팀워크와 문제 해결 능력을 향상시킬 수 있었습니다.
+      해당 프로젝트는 고등학교 3학년 여름방학에 제작한 저의 첫 프로젝트입니다.
+
+      사용자는 웹페이지에 여러 단어를 입력할 수 있으며, 입력된 단어를 기반으로 이미지와 간단한 이야기를 생성받을 수 있습니다. 
+
+      프로젝트 제작 당시 ChatGPT는 Dall-E를 바로 호출해 이미지를 생성하는 기능이 없었기 때문에, ChatGPT로 이야기를 만든 후 해당 이야기를 Dall-E 요청으로 넘겨 이미지를 생성하는 방식을 채택했습니다.
     `,
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: ["python", "RestAPI", "Flask", "OpenAI API", "HTML", "CSS", "JavaScript", "Postman Agent" ,"Few-Show", "Learning"],
     features: [
-      "사용자 인증 및 권한 관리",
-      "실시간 데이터 시각화",
-      "알림 시스템",
-      "반응형 디자인",
-      "다국어 지원"
+      "Flask를 통한 OpenAI API 활용",
+      "RestfulAPI 채택",
+      "Few-Shot Learning 기법을 사용해 언어모델 Fine-Tuning",
+      "Postman Agent 활용으로 교내 네트워크를 통해 접속할 수 있도록 서비스 배포"
     ],
     date: "2023년 6월 - 2023년 12월",
     role: "프론트엔드 개발자",

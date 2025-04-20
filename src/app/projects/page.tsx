@@ -4,9 +4,9 @@ export default function Projects() {
   const projects = [
     {
       id: '1',
-      title: "프로젝트 1",
-      description: "프로젝트에 대한 간단한 설명",
-      technologies: ["React", "Node.js", "MongoDB"],
+      title: "Image & Story Generator",
+      description: "API를 사용한 Image To Text, Story Generator",
+      technologies: ["python", "RestAPI", "Flask", "OpenAI API", "HTML", "CSS", "JavaScript", "Postman Agent" ,"Few-Show", "Learning"],
     },
     {
       id: '2',
