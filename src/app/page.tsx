@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 // 프로젝트 샘플 데이터
 const projects = [
@@ -80,9 +81,14 @@ export default function Home() {
               <div className="w-64 h-64 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20 animate-pulse-slow"></div>
                 <div className="absolute inset-2 glass rounded-full overflow-hidden flex items-center justify-center">
-                  <svg className="w-32 h-32 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                  </svg>
+                  <Image 
+                    src="/images/profile.jpg"
+                    alt="Profile Image"
+                    width={200}
+                    height={200}
+                    className="object-cover w-full h-full"
+                    priority
+                  />
                 </div>
               </div>
             </div>
