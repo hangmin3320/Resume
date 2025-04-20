@@ -120,6 +120,14 @@ export default function Home() {
                     <li>교내 자율동아리 AIIA 소속</li>
                   </ul>
                 </div>
+                <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-300">
+                  <h4 className="text-xl font-medium text-gray-900 dark:text-white">천안신당고등학교</h4>
+                  <p className="text-gray-600 dark:text-gray-300">과학중점반 (2학년 - 3학년)</p>
+                  <p className="text-gray-500 dark:text-gray-400">2022 - 2023</p>
+                  <ul className="mt-4 list-disc list-inside text-gray-700 dark:text-gray-300">
+                    <li>교과 우수상 (정보)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
