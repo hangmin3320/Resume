@@ -1,9 +1,32 @@
 'use client';
 
 import { useTheme } from '../context/ThemeContext';
+import { useState, useEffect } from 'react';
 
 export default function ThemeSwitcher() {
-  const { darkMode, toggleDarkMode } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Safe access to theme context
+  let darkMode = false;
+  let toggleDarkMode = () => {};
+
+  try {
+    const theme = useTheme();
+    darkMode = theme.darkMode;
+    toggleDarkMode = theme.toggleDarkMode;
+  } catch (e) {
+    // Theme context not available yet
+  }
+
+  // Only show the theme switcher after mounting to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Don't render anything until mounted to avoid hydration mismatch
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button

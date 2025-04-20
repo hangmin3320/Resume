@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && touch out/.nojekyll"
   },
+  "homepage": "https://johangmin.github.io/Resume",
   "dependencies": {
     "next": "15.2.4",
     "react": "^19.0.0",

@@ -11,9 +11,13 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
-  
-  // 로컬 스토리지에서 다크모드 설정 불러오기
+  const [mounted, setMounted] = useState(false);
+
+  // Only run on client-side
   useEffect(() => {
+    setMounted(true);
+
+    // 로컬 스토리지에서 다크모드 설정 불러오기
     const savedDarkMode = localStorage.getItem('darkMode');
     if (savedDarkMode) {
       setDarkMode(JSON.parse(savedDarkMode));
@@ -26,17 +30,26 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // 다크모드 설정이 변경되면 HTML에 클래스 추가/제거 및 로컬 스토리지에 저장
   useEffect(() => {
+    if (!mounted) return;
+
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
-  }, [darkMode]);
+  }, [darkMode, mounted]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
+  // Render children only when mounted to avoid hydration mismatch
+  if (!mounted) {
+    // You can return a loading state or null
+    // For now, we'll return the children without theme context to avoid layout shift
+    return <>{children}</>;
+  }
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>

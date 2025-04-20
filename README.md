@@ -29,8 +29,43 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Deploy on GitHub Pages
+
+This project is configured to deploy to GitHub Pages using GitHub Actions.
+
+### Automatic Deployment
+
+When you push changes to the `main` branch, GitHub Actions will automatically build and deploy the site to GitHub Pages.
+
+The deployment workflow:
+1. Checks out the code
+2. Sets up Node.js 22.14.0
+3. Installs dependencies
+4. Builds the project
+5. Creates a .nojekyll file
+6. Deploys to GitHub Pages
+
+### Manual Deployment
+
+You can also deploy manually:
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Configuration
+
+The project is configured for GitHub Pages in:
+- `next.config.mjs`: Sets output to 'export', configures basePath and assetPrefix
+- `package.json`: Includes deploy script and homepage URL
+- `.github/workflows/deploy.yml`: GitHub Actions workflow for automated deployment
+
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Alternatively, you can deploy your Next.js app using the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
