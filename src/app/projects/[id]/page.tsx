@@ -77,6 +77,13 @@ function getProjectById(id: string) {
   return projects.find(project => project.id === id);
 }
 
+// 정적 생성을 위한 경로 매개변수 생성
+export function generateStaticParams() {
+  return projects.map(project => ({
+    id: project.id
+  }));
+}
+
 export default function ProjectDetail({ params }: { params: { id: string } }) {
   const project = getProjectById(params.id);
 
