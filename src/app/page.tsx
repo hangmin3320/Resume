@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20 animate-pulse-slow"></div>
                 <div className="absolute inset-2 glass rounded-full overflow-hidden flex items-center justify-center">
                   <Image 
-                    src="/images/profile.jpg"
+                    src="/images/croppedProfile.jpg"
                     alt="Profile Image"
                     width={200}
                     height={200}
