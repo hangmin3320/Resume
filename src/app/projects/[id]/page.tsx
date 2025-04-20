@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+// 변환된 타입 정의
+type PageParams = Promise<{ id: string }>;
+
 // 프로젝트 목록 데이터 (실제로는 데이터베이스나 API에서 가져올 수 있음)
 const projects = [
   {
@@ -84,8 +87,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
-  const project = getProjectById(params.id);
+export default async function ProjectDetail({ params }: { params: PageParams }) {
+  const { id } = await params;
+  const project = getProjectById(id);
 
   if (!project) {
     return (
