@@ -20,9 +20,9 @@ const projects = [
       "Few-Shot Learning 기법을 사용해 언어모델 Fine-Tuning",
       "Postman Agent 활용으로 교내 네트워크를 통해 접속할 수 있도록 서비스 배포"
     ],
-    date: "2023년 6월 - 2023년 12월",
-    role: "프론트엔드 개발자",
-    github: "https://github.com/username/project1",
+    date: "2023년 8월",
+    role: "프론트엔드 & 백엔드 개발자",
+    github: "https://github.com/hangmin3320/FirstProject",
     liveDemo: "https://project1-demo.com"
   },
   {
