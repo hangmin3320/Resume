@@ -16,22 +16,21 @@ const projects = [
   },
 ];
 
-// 기술 샘플 데이터
+// 기술 데이터
 const skills = {
-  frontend: [
-    { name: "HTML/CSS", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "React", level: 80 },
+  used: [
+    { name: "Python" },
+    { name: "PyTorch" },
+    { name: "DeepLearning (CNN)" },
+    { name: "FastAPI" },
+    { name: "Git" },
+    { name: "GitHub Actions" },
   ],
-  backend: [
-    { name: "Node.js", level: 85 },
-    { name: "Express", level: 80 },
-    { name: "MongoDB", level: 75 },
-  ],
-  tools: [
-    { name: "Git", level: 90 },
-    { name: "Docker", level: 75 },
-    { name: "AWS", level: 70 },
+  interested: [
+    { name: "LLM" },
+    { name: "Docker" },
+    { name: "Backend" },
+    { name: "Django" },
   ],
 };
 
@@ -78,7 +77,7 @@ export default function Home() {
       <section id="about" className="min-h-screen bg-white dark:bg-gray-800 py-20 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">About Me</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">경력</h3>
@@ -150,63 +149,25 @@ export default function Home() {
       <section id="skills" className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">Skills</h2>
-          
+
           <div className="space-y-12">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Frontend</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">이런 기술을 사용했어요</h3>
               <div className="space-y-4">
-                {skills.frontend.map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 transition-colors duration-300">
-                      <div
-                        className="bg-blue-600 h-2.5 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                {skills.used.map((skill, index) => (
+                  <div key={index} className="py-1">
+                    <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Backend</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">이런 기술에도 관심있어요</h3>
               <div className="space-y-4">
-                {skills.backend.map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 transition-colors duration-300">
-                      <div
-                        className="bg-green-600 h-2.5 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Tools</h3>
-              <div className="space-y-4">
-                {skills.tools.map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 transition-colors duration-300">
-                      <div
-                        className="bg-purple-600 h-2.5 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                {skills.interested.map((skill, index) => (
+                  <div key={index} className="py-1">
+                    <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
                   </div>
                 ))}
               </div>
@@ -219,7 +180,7 @@ export default function Home() {
       <section id="projects" className="min-h-screen bg-white dark:bg-gray-800 py-20 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">Projects</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
@@ -253,7 +214,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-8 text-center">
             <Link 
               href="/projects" 
@@ -269,7 +230,7 @@ export default function Home() {
       <section id="contact" className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">Contact</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">연락처 정보</h3>
