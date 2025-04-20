@@ -10,9 +10,9 @@ const projects = [
   },
   {
     id: '2',
-    title: "프로젝트 2",
-    description: "프로젝트에 대한 간단한 설명",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
+    title: "Car Classification Model (for PyTorch)",
+    description: "PyTorch를 활용한 자동차 분류 모델",
+    technologies: ["Classification", "10-classes", "PyTorch", "DeepLearning", "Wide_ResNet", "GradCAM", "Confusion Matrix"],
   },
 ];
 

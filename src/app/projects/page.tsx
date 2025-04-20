@@ -10,9 +10,9 @@ export default function Projects() {
     },
     {
       id: '2',
-      title: "프로젝트 2",
-      description: "프로젝트에 대한 간단한 설명",
-      technologies: ["Vue.js", "Express", "PostgreSQL"],
+      title: "Car Classification Model (for PyTorch)",
+      description: "PyTorch를 활용한 자동차 분류 모델",
+      technologies: ["Classification", "10-classes", "PyTorch", "DeepLearning", "Wide_ResNet", "GradCAM", "Confusion Matrix"],
     },
     // 추가 프로젝트들...
   ];
@@ -21,7 +21,7 @@ export default function Projects() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 transition-colors duration-300">Projects</h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors duration-300">
