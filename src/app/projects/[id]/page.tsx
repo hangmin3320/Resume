@@ -45,6 +45,30 @@ const projects = [
     role: "AI 개발자",
     github: "https://github.com/hangmin3320/AIIA_AFAC",
     liveDemo: "https://car-classification-demo.com"
+  },
+  {
+    id: '3',
+    title: "AIIA-GPT (ChatBot for AIIA)",
+    description: "동아리를 위한 챗봇",
+    detailedDescription: `
+      가천대학교 교내 자율동아리 AIIA의 챗봇입니다.
+      동아리에서 진행한 첫 협업 프로젝트이기 때문에 작은 부분부터 시작하기로 하였습니다.
+
+      챗봇을 만들기 위한 Fine-tuning과 CD 파이프라인 구축/간단한 Docker 개념을 익히게 되었습니다.
+
+      해당 서비스는 사용자들에게 동아리 정보(인원, 운영방식, 부서 등)을 제공할 수 있으며
+      동아리의 운영진에게 직접 문의를 하고 답변을 받는 시간의 텀을 없애기 위해 제작하였습니다.
+    `,
+    technologies: ["OpenAI API", "Flask", "Prompt Engineering", "Docker", "CD", "GitHub Actions"],
+    features: [
+      "OpenAI API 채택 → Fine-tuning을 통해 동아리 전용 챗봇으로 학습",
+      "Docker를 사용한 배포",
+      "GitHub Actions CD 파이프라인 구축"
+    ],
+    date: "2024년 12월 - 2025년 1월",
+    role: "AI 개발자 & CD 파이프라인 구축",
+    github: "https://github.com/hangmin3320/AIIA-GPT",
+    liveDemo: "https://aiia-gpt-demo.com"
   }
 ];
 
@@ -103,13 +127,15 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">역할</h3>
                 <p className="text-gray-600 dark:text-gray-300">{project.role}</p>
               </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">링크</h3>
-                <div className="flex space-x-4">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">GitHub</a>
-                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">Live Demo</a>
+              {project.id !== '3' && (
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">링크</h3>
+                  <div className="flex space-x-4">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">GitHub</a>
+                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">Live Demo</a>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <div className="mb-8">

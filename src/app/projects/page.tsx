@@ -14,6 +14,12 @@ export default function Projects() {
       description: "PyTorch를 활용한 자동차 분류 모델",
       technologies: ["Classification", "10-classes", "PyTorch", "DeepLearning", "Wide_ResNet", "GradCAM", "Confusion Matrix"],
     },
+    {
+      id: '3',
+      title: "AIIA-GPT (ChatBot for AIIA)",
+      description: "동아리를 위한 챗봇",
+      technologies: ["OpenAI API", "Flask", "Prompt Engineering", "Docker", "CD", "GitHub Actions"],
+    },
     // 추가 프로젝트들...
   ];
 
