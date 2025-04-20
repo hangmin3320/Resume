@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 // 프로젝트 샘플 데이터
 const projects = [
@@ -42,6 +45,12 @@ const skills = {
 };
 
 export default function Home() {
+  const pathname = usePathname();
+  // Determine if we're in production by checking if pathname starts with '/Resume'
+  const isProduction = process.env.NODE_ENV === 'production';
+  const basePath = isProduction ? '/Resume' : '';
+  const imagePath = `${basePath}/images/croppedProfile.jpg`;
+
   return (
     <div>
       {/* 홈 섹션 */}
@@ -82,7 +91,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20 animate-pulse-slow"></div>
                 <div className="absolute inset-2 glass rounded-full overflow-hidden flex items-center justify-center">
                   <Image 
-                    src="/images/croppedProfile.jpg"
+                    src={imagePath}
                     alt="Profile Image"
                     width={200}
                     height={200}
